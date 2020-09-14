@@ -1,0 +1,93 @@
+{
+  "id": "8ea627fe-c51b-4545-9b21-922d40c7edb7",
+  "version": "2.0",
+  "name": "ham-if-else",
+  "url": "https://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "25c4a320-0558-4531-97b9-694f633270a3",
+    "name": "if-else",
+    "commands": [{
+      "id": "5a096253-c478-41b9-9d13-2cbecd30979f",
+      "comment": "",
+      "command": "open",
+      "target": "/entry_ad",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7da9b4ee-b90f-47e7-913e-e9470ed7864f",
+      "comment": "",
+      "command": "if",
+      "target": "document.querySelector('#modal') && document.querySelector('#modal').offsetHeight !==0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46f45146-c820-4b03-bbf3-c557bf3b72b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.modal-footer > p",
+      "targets": [
+        ["css=.modal-footer > p", "css:finder"],
+        ["xpath=//div[@id='modal']/div[2]/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Close')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91e9cfdb-ce3d-423c-a68e-50a2d28785ed",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "css=.modal",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c1dd3c59-805b-447f-a170-fe00499bb824",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dc76d50-70ec-4272-8cf9-a7799a902f49",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Elemental Selenium",
+      "targets": [
+        ["linkText=Elemental Selenium", "linkText"],
+        ["css=.large-4 a", "css:finder"],
+        ["xpath=//a[contains(text(),'Elemental Selenium')]", "xpath:link"],
+        ["xpath=//div[@id='page-footer']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://elementalselenium.com/']", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Elemental Selenium')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win10",
+      "windowTimeout": 2000
+    }, {
+      "id": "39a2d8c2-accc-4141-879b-646afada40a4",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win10}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cf0f383-4750-4c68-bf5f-7e68c2aa6f99",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Elemental Selenium: Receive a Free, Weekly Tip on Using Selenium like a Pro",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e5de55f3-a75a-43c6-bdbb-9d64a2d9f517",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["25c4a320-0558-4531-97b9-694f633270a3"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/"],
+  "plugins": []
+}
